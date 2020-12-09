@@ -46,7 +46,49 @@ for (const number of myNumbers) {
 }
 
 
-// Using higher-order function, forEach()
-myNumbers.forEach((theNumber) => {
-    console.log(`This is number ${theNumber}`)
+const myOtherNumbers = [21, 22, 23, 24, 25];
+// Using higher-order function, forEach(), being passed an anonymous function. Syntax: 
+//
+//          arr.forEach(callback(currentValue[, index[, array]]){
+//                          execute something
+//          }[, thisArg]);
+//
+/*
+
+callback
+    Function to execute on each element. It accepts between one and three arguments:
+currentValue
+    The current element being processed in the array.
+index Optional
+    The index of currentValue in the array.
+array Optional
+    The array forEach() was called upon.
+thisArg Optional
+    Value to use as this when executing callback.
+
+*/
+myOtherNumbers.forEach((theNumber) => {
+    console.log(`This is number ${theNumber}`);
 });
+
+
+myNumbers.forEach((theNumber, index) => {
+    console.log(`This is number ${theNumber} at index ${index}`);
+});
+
+
+
+// Write a function that mulitplies each number in an array by two and returns a new array
+
+const multiplyByTwo = function (numbers) {
+    const result = [];
+
+    numbers.forEach((aNumber) => {
+        const multiplied = aNumber * 2;
+        result.push(multiplied);
+    });
+
+    return result;
+}
+
+console.log(multiplyByTwo(myNumbers));
