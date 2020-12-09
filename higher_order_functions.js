@@ -80,10 +80,10 @@ myNumbers.forEach((theNumber, index) => {
 
 // Write a function that mulitplies each number in an array by two and returns a new array
 
-const multiplyByTwo = function (numbers) {
+const multiplyByTwo = function (numbersArray) {
     const result = [];
 
-    numbers.forEach((aNumber) => {
+    numbersArray.forEach((aNumber) => {
         const multiplied = aNumber * 2;
         result.push(multiplied);
     });
